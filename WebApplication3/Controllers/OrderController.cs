@@ -16,7 +16,9 @@ namespace WebApplication3.Controllers
             //  ViewBag.CustId = order.CustId;
             //  ViewBag.CustName = order.CustName;
             // return View();
-         
+            Models.OrderService orderService = new Models.OrderService();
+            ViewBag.Data = orderService.GetOrders();
+
             return View();
         }
         public ActionResult Index2(string id)
@@ -28,7 +30,7 @@ namespace WebApplication3.Controllers
 
         public ActionResult InsertOrder()
         {
-
+           
             return View();
         }
 

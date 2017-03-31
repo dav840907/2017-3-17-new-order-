@@ -38,6 +38,13 @@ namespace WebApplication3.Models
             return new List<Order>();
         }
 
+        public List<Models.Order> GetOrders()
+        {
+            List<Models.Order> result = new List<Order>();
+            result.Add(new Order() { CustId = "Gss", CustName = "123", EmpId = 1, EmpName = "12315"});
+            return result;
+        }
+
         /// <summary>
         /// 刪除訂單
         /// </summary>

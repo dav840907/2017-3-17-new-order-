@@ -1,0 +1,24 @@
+﻿@model WebApplication3.Models.Order
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>run</td>
+        <td>123</td>
+        <td>run</td>
+        <td>123</td>
+    </tr>
+    <tr>
+         <td>run</td>
+         <td>123</td>
+         <td>run</td>
+         <td>123</td>
+    </tr>
+</table>
+
+@{Html.RenderPartial("_SysDataPartial");}
+@{Html.RenderAction("", "");}

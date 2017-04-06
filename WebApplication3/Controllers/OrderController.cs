@@ -9,6 +9,10 @@ namespace WebApplication3.Controllers
     public class OrderController : Controller
     {
         // GET: Order
+        /// <summary>
+        /// 訂單管理系統首頁
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             //Models.OrderService orderService = new Models.OrderService();
@@ -16,9 +20,22 @@ namespace WebApplication3.Controllers
             //  ViewBag.CustId = order.CustId;
             //  ViewBag.CustName = order.CustName;
             // return View();
-            Models.OrderService orderService = new Models.OrderService();
-            ViewBag.Data = orderService.GetOrders();
 
+            // Models.OrderService orderService = new Models.OrderService();
+            //ViewBag.Data = orderService.GetOrders();
+
+            List<SelectListItem> custData = new List<SelectListItem>();
+            custData.Add(new SelectListItem()
+            {
+                Text = "叡揚資訊",
+                Value = "1"
+            });
+            
+            custData.Add(new SelectListItem() {
+                Text = "軟網資訊",
+                Value = "2"
+             });
+            ViewBag.custData=custData;
             return View();
         }
         public ActionResult Index2(string id)

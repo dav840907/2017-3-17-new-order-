@@ -41,11 +41,11 @@ namespace WebApplication3.Models
         public List<Models.Order> GetOrders()
         {
             List<Models.Order> result = new List<Order>();
-            result.Add(new Order() { CustId = "Gss", CustName = "123", EmpId = 1, EmpName = "12315"});
+            result.Add(new Order() { CustId = "Gss", CustName = "123", EmpId = 1, EmpName = "12315",Orderdate=DateTime.Parse("2017/3/30")});
             return result;
         }
 
-        /// <summary>
+        /// <summary> 
         /// 刪除訂單
         /// </summary>
         public void DeletOrderById()
